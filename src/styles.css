@@ -1,0 +1,297 @@
+/* latin */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/*body with margin and color*/
+body {
+  margin: 60px;
+  border: solid 2px #9fd4b0;
+  padding: 20px;
+  background-image: linear-gradient(rgba(0, 168, 160, 0.7),
+  rgba(0, 91, 86, 0.9)), url('backpic/pixgr.jpg');
+  font-family: 'Ubuntu Mono';
+  font-size: 16px;
+}
+
+
+/*picture Logo at the top of the page*/
+.piclogo {
+  width: 22px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+
+/*background of home allpost allpics about*/
+header {
+  background-color: #f0eacc;
+  position: fixed;
+  width: 80%;
+  z-index: 1;
+  border: solid  2px #9fd4b0 ;
+  display: inline-block;
+}
+/*4 buttons home all collect in panel*/
+ul.a {
+  font-size: 18px;
+  padding: 1px 1px;
+  margin-top: 18px;
+  display: inline block;
+}
+/* about button only*/
+ul.b {
+  font-size: 18px;
+  text-align: right;
+  position: absolute;
+  top: 1px;
+  right: 14px;
+  width: 100px;
+  height: 10px;
+}
+
+/* popular blogpost leftside*/
+ul.c {
+  font-size: 10px;
+  padding: 1px;
+  margin: 1px;
+  text-align: center;
+}
+
+
+/*rightcolumn for the front 4 slides*/
+.rightcolumn {
+  margin-top: 100px;
+}
+/*blog posts in the front 4 slides*/
+.card {
+  background-color: #f0eacc;
+  margin: 20px 0px 0px 100px;
+  padding: 1px 30px;
+  height: 330px;
+  width: 580px;
+  border: dotted 2px #8c304a;
+  color: white;
+}
+/* inside card the 4 containers and their behavior */
+.container {
+  position: relative;
+  max-width: 495px; /* Maximum */
+  margin-top: 16px;
+  opacity: 0.5;
+  transition: all 0.9s linear;
+  transition-delay: 0.2s;
+  border: 3px double #8c304a;
+}
+.container:hover {
+  background-color: none;  /**/
+  opacity: 1;
+  transition: all 0.7s linear;
+  transition-delay: 0.2s;
+}
+.container .content {
+  position: absolute; /* Position  text */
+  bottom: 0; /* at the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7); /* black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 90%;
+  padding: 12px 25px;
+  margin-bottom: 0px;
+}
+
+
+/* popular blog posts leftside*/
+.headposts {
+  font: bold 11px/1 font;
+  color: black;
+  margin: 1px 1px 1px 1px;
+  text-align: center;
+}
+/*blog posts section leftside*/
+section {
+  height: 350px;
+  margin-top: 80px;
+  padding: 4px 4px;
+  background-color: #f0eacc;
+  position: fixed;
+  color: black;
+  text-align: center;
+  border: solid 2px #9fd4b0;
+  transition: 0.3s linear;
+}
+section:hover {
+  background-color: #757263;
+  transition: 0.7s linear;
+}
+
+
+/* all buttons */
+.button {
+  background-color: #bfa987;
+  color: black;
+  border: 2px solid #9fd4b0;
+  width: 25px;
+  margin: 20px 17px 13px 9px;
+  padding: 6px;
+}
+.button:hover {
+  background-color: #757263;
+  border: 2px solid black;
+  color: white;
+  transition: all 0.7s linear;
+}
+
+
+/* search button under popular posts*/
+.search {
+  background-color: #9fd4b0;
+  border: 3px double black;
+  color: #a33856;
+  padding: 5px 12px 4px 9px;
+  margin: 470px auto 0px 0px;
+  position: fixed;
+  font: bold 12px/2 font;
+  font-family: 'Ubuntu Mono';
+  transition: 0.3s linear;
+}
+.search:hover {
+  background-color: #bfa987;
+  opacity: 1;
+  transition: all 0.8s linear;
+  transition-delay: 0.2s;
+}
+/* overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7); /* see-through */
+}
+
+/* Searchbar Start: The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 60%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 40px;
+  right: 75px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+/* the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: 3px double black;
+  float: center;
+  width: 40%;
+  background: white;
+  font-family: 'Ubuntu Mono';
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* the search button */
+.overlay button {
+  float: center;
+  width: 14%;
+  padding: 15px;
+  background: #bfa987;
+  font-size: 18px;
+  border: 3px double black;
+  cursor: pointer;
+  font-family: 'Ubuntu Mono';
+}
+
+.overlay button:hover {
+  background: grey;
+  transition: linear 0.2s;
+}
+/* Searchbar End*/
+
+
+.content h3, h6 {
+  margin: 1px;
+  color: black;
+}
+.content p {
+  margin-bottom: 1px;
+  color: black;
+}
+
+
+/*  Table at bottom */
+table {
+  margin: 90px 40px 40px 100px;
+  padding: 4px 4px;
+  border: 1px dotted #d6d0b5;
+}
+tr {
+  background: #bfa987;
+  color: black;
+}
+th {
+  font-weight: bold;
+  text-align: center;
+    width: 208px;
+}
+td {
+  font-weight: 12;
+  text-align: center;
+}
+
+/*Footer for the Blog*/
+.footer {
+  height: 20px;
+  background-color: grey;
+  text-align: center;
+  color: #bfa987;
+  opacity: 0.6;
+}
+
+
+/*links have no underline*/
+a {
+  text-decoration: none;
+  color: #fa8d8f;
+}
+
+/* links on page with text */
+:link {
+  color: black;
+  outline-color: grey;
+}
+:visited {
+  background-color: #a33856;
+  color: #411622;
+  outline-color: #411622;
+}
